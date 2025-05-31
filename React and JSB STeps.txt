@@ -1,0 +1,82 @@
+npm create vite@latest my-react-app -- --template react
+cd my-react-app
+npm i 
+npm run dev 
+
+backend/
+├── src/
+│   └── main/
+│       ├── java/com/yourapp/
+│       │   ├── controller/        # API endpoints
+│       │   │   └── UserController.java
+│       │   ├── service/           # Business logic
+│       │   │   └── UserService.java
+│       │   ├── repository/        # JDBC DB queries (DAO layer)
+│       │   │   └── UserRepository.java
+│       │   ├── model/             # Data models (User, Role, etc.)
+│       │   │   └── User.java
+│       │   └── security/          # Security config & filters
+│       │       └── WebSecurityConfig.java
+│       └── resources/
+│           ├── application.properties
+│           └── schema.sql / data.sql (optional DB scripts)
+├── pom.xml
+
+
+
+frontend/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/                # Reusable UI components
+│   │   ├── UserList.jsx
+│   │   ├── AddUser.jsx
+│   │   └── EditUser.jsx
+│   ├── pages/                     # Full page views
+│   │   └── Home.jsx
+│   ├── services/                  # Axios-based API calls
+│   │   └── userService.js
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── package.json
+
+
+1. Project
+Maven (recommended)
+
+(You can use Gradle too, but Maven is simpler for beginners)
+
+2. Language
+Java
+
+3. Spring Boot version
+Use the latest stable version (e.g., 3.2.x or 3.1.x)
+
+4. Project Metadata
+Group: com.yourname (e.g., com.aayush)
+
+Artifact: crud-app
+
+Name: crud-app
+
+Package name: com.yourname.crudapp
+
+Packaging: Jar
+
+Java: 17 (or 21 if your IDE supports it)
+
+5. Dependencies (very important)
+Search and add:
+
+✅ Spring Web – for building REST APIs
+✅ Spring JDBC – for SQL-based DB access
+✅ Spring Security – for role-based login/authentication
+✅ MySQL Driver – for connecting to MySQL
+✅ Spring Boot DevTools – for live reload (optional)
+✅ Lombok – to reduce boilerplate in model classes (optional but useful)
+
+
+
+
+
